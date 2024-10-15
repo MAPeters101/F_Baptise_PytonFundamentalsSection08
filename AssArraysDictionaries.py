@@ -47,6 +47,20 @@ del d['a']
 print(d)
 print(id(d))
 
+#print(d['x'])
+#del d['x']
+
+print(globals())
+print(type(globals()))
+p = globals()['person']
+print(globals()['person'])
+print(p)
+print(p is person)
+
+
+
+
+
 
 
 
