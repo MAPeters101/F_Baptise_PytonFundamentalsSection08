@@ -122,6 +122,40 @@ print(d)
 print()
 l = list(d)
 print(l)
+print()
+
+d = dict.fromkeys('Python is an awesome language!', 0)
+print(d)
+print()
+
+d1 = {}
+d2 = dict()
+print(d1)
+print(d2)
+print()
+
+transactions = [
+    {'item': 'widget', 'trans_type': 'sale', 'quantity': 10},
+    {'item': 'widget', 'trans_type': 'sale', 'quantity': 5},
+    {'item': 'widget', 'trans_type': 'refund', 'quantity': 2},
+    {'item': 'license', 'trans_type': 'sale', 'quantity': 1},
+    {'item': 'license', 'trans_type': 'sale', 'quantity': 1},
+    {'item': 'license', 'trans_type': 'refund', 'quantity': 1},
+]
+
+total_sold = {}
+for transaction in transactions:
+    item = transaction['item']
+    is_sale = True if transaction['trans_type'] == 'sale' else False
+    quantity = transaction['quantity']
+
+    if is_sale:
+        if item in total_sold:
+            total_sold[item] += quantity
+        else:
+            total_sold[item] = quantity
+
+print(total_sold)
 
 
 
