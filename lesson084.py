@@ -76,6 +76,57 @@ print(d_copy)
 d['a'].append(4)
 print(d)
 print(d_copy)
+print()
+
+d_copy = deepcopy(d)
+print(d)
+print(d_copy)
+d_copy['a'].append(5)
+print(d)
+print(d_copy)
+print()
+
+
+d = dict(a=1, b=2)
+print(d)
+d = {3.14: 'pi', 2:'even'}
+print(d)
+#d = dict(2='even')
+
+
+
+
+print(d)
+
+d = {
+    'open': 0,
+    'high': 0,
+    'low': 0,
+    'close': 0,
+}
+
+print(type(d))
+
+d = dict.fromkeys(['open', 'high', 'low', 'close'], 0)
+print(d)
+
+d = dict.fromkeys('python', 1)
+print(d)
+
+d = dict.fromkeys(['a', 'a'], 100)
+print(d)
+
+symbols = ['AAPL', 'MSFT', 'AAPL', 'MSFT']
+d = dict.fromkeys(symbols, 0)
+print(d)
+print()
+l = list(d)
+print(l)
+
+
+
+
+
 
 
 
